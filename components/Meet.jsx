@@ -10,7 +10,7 @@ const Meet = () => {
         <h2>All Events</h2>
         <ul>
             {data?.map((event) => (
-                <li key={event._id}>{event.title}</li>
+                <li>{event.title}</li>
             ))}
         </ul>
     </div>
