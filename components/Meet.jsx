@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useFetch from "../useFetch";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Meet = () => {
     const { data, loading, error } = useFetch("https://bi-backend-beige.vercel.app/events");
