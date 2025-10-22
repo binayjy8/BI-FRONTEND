@@ -9,7 +9,7 @@ const Meet = () => {
     <div>
         <h2>All Events</h2>
         <ul>
-            {data?.map((event) => (
+            {data?.event?.map((event) => (
                 <li>{event.title}</li>
             ))}
         </ul>
