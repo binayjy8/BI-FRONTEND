@@ -43,7 +43,7 @@ const Meet = () => {
     const events = data?.event || [];
 
     return (
-        <div className="container my-5" style="background-color: #f0f0f0;">
+        <div className="container my-5">
             <h2 className="mb-4">Meetup Events</h2>
             
             {/* Grid layout for the events */}
