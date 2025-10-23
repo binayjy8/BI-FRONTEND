@@ -77,26 +77,20 @@ const Meet = () => {
                                 
                                 {/* Date and Time */}
                                 <p className="card-text text-muted mb-1 small">
-                                    {event.date || 'Date N/A'} &bull; {event.time || 'Time N/A'}
+                                    {event.dateTime || 'Date N/A'} 
                                 </p>
 
-                                {/* Event Title - Bold and prominent */}
+                        
                                 <h5 className="card-title fw-bold text-dark">
                                     {event.title}
                                 </h5>
 
-                                {/* Add more details if your data provides them, e.g., location or a short description */}
-                                {/* <p className="card-text small text-truncate">
-                                    {event.description || 'A quick event description.'}
-                                </p> 
-                                */}
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
 
-            {/* Removing the initial placeholder card and the simple <ul> list */}
         </div>
     );
 }
