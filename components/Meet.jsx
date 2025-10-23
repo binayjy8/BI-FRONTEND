@@ -58,7 +58,7 @@ const Meet = () => {
                                 {/* Replace 'event.imageUrl' with the actual field from your data if available */}
                                 {/* Using a placeholder image for demonstration */}
                                 <img 
-                                    src={event.imageUrl || `https://picsum.photos/400/250?random=${index}`} 
+                                    src={event.imageUrl} 
                                     className="card-img-top" 
                                     alt={event.title}
                                     style={{ height: '200px', objectFit: 'cover' }}
