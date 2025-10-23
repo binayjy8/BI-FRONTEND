@@ -44,7 +44,7 @@ const Meet = () => {
 
     return (
         <div className="container my-5">
-            <h2 className="mb-4">All Events</h2>
+            <h2 className="mb-4">Meetup Events</h2>
             
             {/* Grid layout for the events */}
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
