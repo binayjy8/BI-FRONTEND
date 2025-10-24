@@ -48,7 +48,6 @@ const Meet = () => {
                     <input 
                         id="title-search"
                         type="text"
-                        className="p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 w-full transition duration-150 ease-in-out"
                         value={gotTitle}
                         onChange={selectHandler} 
                     />
