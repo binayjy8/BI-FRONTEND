@@ -20,9 +20,9 @@ const Meet = () => {
 
     return (
         <div className="container my-5" style={{ backgroundColor: '#f2f2f2', padding: '20px', borderRadius: '5px' }}>
-            <div>
-                <div>Meetup</div>
-                <div></div>
+            <div className="header-container">
+                <div className="header-left">Meetup</div>
+                <div className="header-right">Search by title & t..</div>
             </div>
             <hr />
         <div className="container my-5">
