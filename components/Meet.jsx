@@ -27,7 +27,13 @@ const Meet = () => {
                          Meetup
                 </div>
                 <div className="header-right">
-                    <button>Search by title & t..</button></div>
+                    <label>Search by title & t..</label>
+                    <select>
+                        <option>Online</option>
+                        <option>Offline</option>
+                        <option>Both</option>
+                    </select>
+                </div>
             </div>
             <hr />
         <div className="container my-5">
