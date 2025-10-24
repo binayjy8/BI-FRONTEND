@@ -28,11 +28,7 @@ const Meet = () => {
                 </div>
                 <div className="header-right">
                     <label>Search by title & t..</label>
-                    <select>
-                        <option>Online</option>
-                        <option>Offline</option>
-                        <option>Both</option>
-                    </select>
+                    
                 </div>
             </div>
             <hr />
@@ -40,7 +36,12 @@ const Meet = () => {
             <div className="d-flex justify-content-between align-items-center ">
                 <div ><h2 className="mb-4">Meetup Events</h2></div>
                 <div className="header-right">
-                    <button>Select event type</button>
+                    <label>Select event type</label>
+                    <select>
+                        <option>Online</option>
+                        <option>Offline</option>
+                        <option>Both</option>
+                    </select>
                 </div>
             </div>
            
