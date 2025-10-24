@@ -40,10 +40,10 @@ const Meet = () => {
                 <div ><h2 className="mb-4">Meetup Events</h2></div>
                 <div className="header-right">
                     <label for="mode">Select event type</label>
-                    <select id="mode" onChange={inputHandler}>
-                        <option value={events.eventType}>Online</option>
-                        <option value={events.eventType}>Offline</option>
-                        <option >Both</option>
+                    <select id="mode" onChange={inputHandler} value={select}>
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
+                        <option value="both">Both</option>
                     </select>
                 </div>
             </div>
