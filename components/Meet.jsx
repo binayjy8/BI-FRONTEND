@@ -20,6 +20,10 @@ const Meet = () => {
 
     return (
         <div className="container my-5" style={{ backgroundColor: '#f2f2f2', padding: '20px', borderRadius: '5px' }}>
+            <div>
+                <div>Meetup</div>
+                <div></div>
+            </div>
             <hr />
         <div className="container my-5">
             <h2 className="mb-4">Meetup Events</h2>
