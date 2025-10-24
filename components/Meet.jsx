@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Meet = () => {
 
     const { data, loading, error } = useFetch("https://bi-backend-beige.vercel.app/events");
+    const [select, setSelect] = useFetch("both");
     console.log(data);
 
     if (loading) {
@@ -25,7 +26,8 @@ const Meet = () => {
                 <div style={{ color: '#E51963', fontWeight: 'bold', fontSize: '24px', fontFamily: 'Pacifico, cursive' }}>
                          Meetup
                 </div>
-                <div className="header-right">Search by title & t..</div>
+                <div className="header-right">
+                    <button>Search by title & t..</button></div>
             </div>
             <hr />
         <div className="container my-5">
