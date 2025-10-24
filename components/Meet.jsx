@@ -101,6 +101,11 @@ const Meet = () => {
             </div>
 
         </div>
+        {data? <div>
+            {filteredEvents.map((event) => {
+                {}
+            })}
+        </div> : <div></div>}
         </div>
     );
 }
