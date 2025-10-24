@@ -6,7 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Meet = () => {
 
     const { data, loading, error } = useFetch("https://bi-backend-beige.vercel.app/events");
-    const [select, setSelect] = useFetch("both");
+    const [select, setSelect] = useState("both");
+    const inputHandler = (event) => {
+        setSelect(event.target.value);
+    }
     console.log(data);
 
     if (loading) {
@@ -36,11 +39,11 @@ const Meet = () => {
             <div className="d-flex justify-content-between align-items-center ">
                 <div ><h2 className="mb-4">Meetup Events</h2></div>
                 <div className="header-right">
-                    <label>Select event type</label>
-                    <select>
-                        <option>Online</option>
-                        <option>Offline</option>
-                        <option>Both</option>
+                    <label for="mode">Select event type</label>
+                    <select id="mode" onChange={inputHandler}>
+                        <option value={events.eventType}>Online</option>
+                        <option value={events.eventType}>Offline</option>
+                        <option >Both</option>
                     </select>
                 </div>
             </div>
