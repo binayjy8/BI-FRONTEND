@@ -29,8 +29,8 @@ const Meet = () => {
             </div>
             <hr />
         <div className="container my-5">
-            <div>
-                <div className="d-flex justify-content-between align-items-center pb-2 mb-4"><h2 className="mb-4">Meetup Events</h2></div>
+            <div className="d-flex justify-content-between align-items-center pb-2 mb-4">
+                <div ><h2 className="mb-4">Meetup Events</h2></div>
                 <div className="header-right">Select event type</div>
             </div>
            
