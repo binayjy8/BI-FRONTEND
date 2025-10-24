@@ -22,6 +22,15 @@ const Meet = () => {
 
     const events = data?.event || [];
 
+    const filteredEvents = events.filter(event => {
+        
+        if (select === "both") {
+            return true;
+        }
+    
+        return event.eventType === select;
+    });
+
     return (
         <div className="container my-5" style={{ backgroundColor: '#f2f2f2', padding: '20px', borderRadius: '5px' }}>
             
@@ -49,7 +58,7 @@ const Meet = () => {
             </div>
            
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                {events.map((event, index) => (
+                {filteredEvents.map((event, index) => (
                     <div className="col" key={event.id || index}>
     
                         <div className="card h-100 overflow-hidden shadow-sm">
