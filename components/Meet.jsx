@@ -29,8 +29,10 @@ const Meet = () => {
             </div>
             <hr />
         <div className="container my-5">
-            <h2 className="mb-4">Meetup Events</h2>
-            
+            <div>
+                <div className="d-flex justify-content-between align-items-center pb-2 mb-4"><h2 className="mb-4">Meetup Events</h2></div>
+                <div className="header-right">Select event type</div>
+            </div>
            
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {events.map((event, index) => (
