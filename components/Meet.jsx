@@ -6,11 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Meet = () => {
 
     const { data, loading, error } = useFetch("https://bi-backend-beige.vercel.app/events");
+    const [gotTitle, setGotTitle] = useState("");
     const [select, setSelect] = useState("both");
+
+    const selectHandler = (event) => {
+        setGotTitle(event.target.value);
+    }
+
     const inputHandler = (event) => {
         setSelect(event.target.value);
     }
-    console.log(data);
 
     if (loading) {
         return <div className="container my-5"><p>Loading events...</p></div>;
@@ -39,7 +44,14 @@ const Meet = () => {
                          Meetup
                 </div>
                 <div className="header-right">
-                    <label>Search by title & t..</label>
+                    <label for="title-search">Search by title & t..</label>
+                    <input 
+                        id="title-search"
+                        type="text"
+                        className="p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 w-full transition duration-150 ease-in-out"
+                        value={gotTitle}
+                        onChange={selectHandler} 
+                    />
                     
                 </div>
             </div>
