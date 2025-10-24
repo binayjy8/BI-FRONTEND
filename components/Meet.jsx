@@ -54,7 +54,7 @@ const Meet = () => {
                                 <span className={`badge position-absolute top-0 start-0 m-2 text-white p-2 ${
                                     event.type === 'Online' ? 'bg-warning' : 'bg-dark'
                                 }`} style={{ zIndex: 1, opacity: 0.9 }}>
-                                    {event.eventType || 'Offline'} Event
+                                    {event.eventType || 'Offline'} 
                                 </span>
                             </div>
 
