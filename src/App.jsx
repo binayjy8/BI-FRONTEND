@@ -5,6 +5,6 @@ import useFetch from "../useFetch";
 export default function App() {
   return(<main>
     <Meet />
-    <EventDetails />
+    {/* <EventDetails /> */}
   </main>)
 }
