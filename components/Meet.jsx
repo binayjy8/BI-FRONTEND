@@ -21,6 +21,7 @@ const Meet = () => {
                 <div>
                     <p>{event.id}</p>
                     <img src={event.imageUrl}/>
+                    <p>{event.title}</p>
                 </div>
             ))}
         </div>
