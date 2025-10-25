@@ -75,20 +75,21 @@ const Meet = () => {
                 {filteredEvents.map((event, index) => (
                     
                     <div className="col" key={event.id || index}>
+                        <Link 
+                            to={`/events/${event.id}`} 
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
     
                         <div className="card h-100 overflow-hidden shadow-sm">
                             
-                          
                             <div className="position-relative">
-                            <Link to={`/events/env/${event.id}`}>
                                 <img 
                                     src={event.imageUrl} 
                                     className="card-img-top" 
                                     alt={event.title}
                                     style={{ height: '200px', objectFit: 'cover' }}
                                 />
-                            </Link>   
-                                
+                              
                                 <span className={`badge position-absolute top-0 start-0 m-2 text-white p-2 ${
                                     event.type === 'Online' ? 'bg-warning' : 'bg-dark'
                                 }`} style={{ zIndex: 1, opacity: 0.9 }}>
@@ -111,9 +112,8 @@ const Meet = () => {
 
                             </div>
                         </div>
-                
+                    </Link >
                     </div>
-                    
                     
                 ))}
                 
