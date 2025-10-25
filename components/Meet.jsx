@@ -112,6 +112,7 @@ const Meet = () => {
             </div>
 
         </div>
+        <button>View Details</button>
         
         </div>
     );
