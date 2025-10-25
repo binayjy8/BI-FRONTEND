@@ -107,7 +107,7 @@ const Meet = () => {
 
                             </div>
                         </div>
-                        <br />
+                    
                         <button>View Details</button>
                     </div>
                     
