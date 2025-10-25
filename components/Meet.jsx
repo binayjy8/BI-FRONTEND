@@ -75,9 +75,7 @@ const Meet = () => {
                 {filteredEvents.map((event, index) => (
                     
                     <div className="col" key={event.id || index}>
-                       
                         <div className="card h-100 overflow-hidden shadow-sm">
-                            
                             <div className="position-relative">
                                 <img 
                                     src={event.imageUrl} 
@@ -93,33 +91,21 @@ const Meet = () => {
                                 </span>
                             </div>
 
-             
                             <div className="card-body">
-                                
-                       
                                 <p className="card-text text-muted mb-1 small">
                                     {event.dateTime || 'Date N/A'} 
                                 </p>
-
-                        
                                 <h5 className="card-title fw-bold text-dark">
                                 <Link 
-                            to={`/events/env/${event.id}`} 
-                        >  {event.title} </Link>
+                                to={`/events/env/${event.id}`} 
+                        >       {event.title} </Link>
                                 </h5>
-
                             </div>
                         </div>
-                    
                     </div>
-                    
                 ))}
-                
             </div>
-
         </div>
-        
-        
         </div>
     );
 }
