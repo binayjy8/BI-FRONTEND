@@ -80,7 +80,7 @@ const Meet = () => {
                             
                           
                             <div className="position-relative">
-                            <Link>
+                            <Link to={`/events/env/${event.id}`}>
                                 <img 
                                     src={event.imageUrl} 
                                     className="card-img-top" 
