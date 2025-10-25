@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useFetch from "../useFetch";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Meet = () => {
      const { data, loading, error } = useFetch("https://bi-backend-beige.vercel.app/events");
@@ -22,7 +22,7 @@ const Meet = () => {
                 <div>
                     <p>{event.id}</p>
                     <img src={event.imageUrl}/>
-                    <p><Link to={`/events/env/${event.id}`}>{event.title}</Link></p>
+                    {/* <p><Link to={`/events/env/${event.id}`}>{event.title}</Link></p> */}
                 </div>
             ))}
         </div>
