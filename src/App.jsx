@@ -8,7 +8,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Meet />} />
-          <Route path="/events/:id" element={<EventDetails />} />
+          <Route path="/events/env/:id" element={<EventDetails />} />
         </Routes>
       </main>
     </Router>
