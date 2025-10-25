@@ -44,6 +44,7 @@ const Meet = () => {
                 <div style={{ color: '#E51963', fontWeight: 'bold', fontSize: '24px', fontFamily: 'Pacifico, cursive' }}>
                          Meetup
                 </div>
+                
                 <div className="header-right">
                     <label for="title-search">Search by title & t..</label>
                     <input 
@@ -70,21 +71,23 @@ const Meet = () => {
             </div>
            
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
                 {filteredEvents.map((event, index) => (
+                    
                     <div className="col" key={event.id || index}>
     
                         <div className="card h-100 overflow-hidden shadow-sm">
                             
                           
                             <div className="position-relative">
-                    
+                            <Link>
                                 <img 
                                     src={event.imageUrl} 
                                     className="card-img-top" 
                                     alt={event.title}
                                     style={{ height: '200px', objectFit: 'cover' }}
                                 />
-                                
+                            </Link>   
                                 
                                 <span className={`badge position-absolute top-0 start-0 m-2 text-white p-2 ${
                                     event.type === 'Online' ? 'bg-warning' : 'bg-dark'
@@ -111,7 +114,9 @@ const Meet = () => {
                 
                     </div>
                     
+                    
                 ))}
+                
             </div>
 
         </div>
