@@ -107,12 +107,14 @@ const Meet = () => {
 
                             </div>
                         </div>
+                        <button>View Details</button>
                     </div>
+                    
                 ))}
             </div>
 
         </div>
-        <button>View Details</button>
+        
         
         </div>
     );
