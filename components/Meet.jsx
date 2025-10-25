@@ -76,7 +76,7 @@ const Meet = () => {
                     
                     <div className="col" key={event.id || index}>
                         <Link 
-                            to={`/events/${event.id}`} 
+                            to={`/events/env/${event.id}`} 
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
     
