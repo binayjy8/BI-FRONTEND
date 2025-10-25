@@ -21,7 +21,7 @@ const Meet = () => {
             {events.map((event) => (
                 <div>
                     <p>{event.id}</p>
-                    <Link to={`events/env/${event.id}`}><img src={event.imageUrl}/></Link>
+                    <img src={event.imageUrl}/>
                     <p>{event.title}</p>
                 </div>
             ))}
