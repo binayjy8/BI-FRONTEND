@@ -78,7 +78,6 @@ const Meet = () => {
                         <Link 
                             to={`/events/env/${event.id}`} 
                         >
-    
                         <div className="card h-100 overflow-hidden shadow-sm">
                             
                             <div className="position-relative">
