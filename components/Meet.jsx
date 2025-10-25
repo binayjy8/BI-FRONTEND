@@ -75,9 +75,7 @@ const Meet = () => {
                 {filteredEvents.map((event, index) => (
                     
                     <div className="col" key={event.id || index}>
-                        <Link 
-                            to={`/events/env/${event.id}`} 
-                        >
+                       
                         <div className="card h-100 overflow-hidden shadow-sm">
                             
                             <div className="position-relative">
@@ -105,12 +103,14 @@ const Meet = () => {
 
                         
                                 <h5 className="card-title fw-bold text-dark">
-                                    {event.title}
+                                <Link 
+                            to={`/events/env/${event.id}`} 
+                        >  {event.title} </Link>
                                 </h5>
 
                             </div>
                         </div>
-                    </Link >
+                    
                     </div>
                     
                 ))}
