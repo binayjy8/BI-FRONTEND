@@ -77,7 +77,6 @@ const Meet = () => {
                     <div className="col" key={event.id || index}>
                         <Link 
                             to={`/events/env/${event.id}`} 
-                            style={{ textDecoration: 'none', color: 'inherit' }}
                         >
     
                         <div className="card h-100 overflow-hidden shadow-sm">
