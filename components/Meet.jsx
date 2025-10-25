@@ -39,7 +39,7 @@ const Meet = () => {
 
     return (
         <div className="container my-5" style={{ backgroundColor: '#f2f2f2', padding: '20px', borderRadius: '5px' }}>
-            
+                
             <div className="d-flex justify-content-between align-items-center pb-2 mb-4">
                 <div style={{ color: '#E51963', fontWeight: 'bold', fontSize: '24px', fontFamily: 'Pacifico, cursive' }}>
                          Meetup
@@ -108,6 +108,7 @@ const Meet = () => {
 
                             </div>
                         </div>
+                
                     </div>
                     
                 ))}
