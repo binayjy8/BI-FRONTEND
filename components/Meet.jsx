@@ -22,7 +22,7 @@ const Meet = () => {
                 <div>
                     <p>{event.id}</p>
                     <img src={event.imageUrl}/>
-                    <p><Link to={`/events/env/${event.id}`}>{event.title}</Link></p>
+                    <p>{event.title}</p>
                 </div>
             ))}
         </div>
