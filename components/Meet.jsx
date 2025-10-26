@@ -154,7 +154,15 @@ const Meet = () => {
       <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap">
         <h1 className="fw-bold mb-3 mb-sm-0">Meetup Events</h1>
 
+         <label
+            htmlFor="eventTypeSelect"
+            className="form-label fw-semibold mb-1"
+            style={{ fontSize: "0.95rem" }}
+          >
+            Select Event Type
+          </label>
         <select
+          id="eventTypeSelect"
           className="form-select w-auto shadow-sm"
           value={selectedType}
           onChange={(e) => setSelectedType(e.target.value)}
