@@ -74,6 +74,7 @@ const Meet = () => {
          
           <select
             className="form-select shadow-sm"
+            placeholder="Select event type"
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
             style={{
