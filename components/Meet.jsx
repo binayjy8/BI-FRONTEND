@@ -273,11 +273,25 @@ const Meet = () => {
       >
         {/* Logo */}
         <div className="d-flex align-items-center mb-3 mb-sm-0">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Meetup_Logo.png"
-            alt="Meetup Logo"
-            style={{ height: "32px", marginRight: "10px" }}
-          />
+           className="d-flex justify-content-between align-items-center flex-wrap py-3 px-1 mb-4"
+        style={{
+          borderBottom: "1px solid #e0e0e0",
+          backgroundColor: "#fafafa",
+          borderRadius: "10px",
+        }}
+
+        {/* === Text Logo === */}
+        <h2
+          className="fw-bold mb-3 mb-sm-0"
+          style={{
+            color: "#f64060",
+            fontFamily: "'Poppins', sans-serif",
+            letterSpacing: "0.5px",
+            fontSize: "1.8rem",
+          }}
+        >
+          Meetup
+        </h2>
         </div>
 
         {/* Search and Dropdown */}
@@ -314,7 +328,7 @@ const Meet = () => {
               cursor: "pointer",
             }}
           >
-            <option value="Both">Select Event Type</option>
+            <option value="Both">Both</option>
             <option value="Online Event">Online Event</option>
             <option value="Offline Event">Offline Event</option>
           </select>
