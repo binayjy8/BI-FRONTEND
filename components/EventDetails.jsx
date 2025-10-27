@@ -34,15 +34,14 @@ const EventDetails = () => {
         >Meetup</h3>
       </div>
 
-      {/* Event Title */}
       <h2 className="fw-bold">{event.title}</h2>
       <p className="text-muted mb-4">
         Hosted By: <strong>{event.hostedBy || "Event Organizer"}</strong>
       </p>
 
-      {/* Main Layout */}
+  
       <div className="row g-4">
-        {/* Left Column */}
+      
         <div className="col-lg-8">
           <img
             src={event.imageUrl}
@@ -51,21 +50,21 @@ const EventDetails = () => {
             style={{ maxHeight: "400px", objectFit: "cover", width: "100%" }}
           />
 
-          {/* Details Section */}
+      
           <h5 className="fw-bold">Details:</h5>
           <p className="text-secondary" style={{ lineHeight: "1.7" }}>
             {event.description ||
               "Stay ahead of the game by attending this event and gaining insights from experts."}
           </p>
 
-          {/* Additional Info */}
+          
           <h5 className="fw-bold mt-4">Additional Information:</h5>
           <ul className="list-unstyled">
             <li><strong>Dress Code:</strong> Smart casual</li>
             <li><strong>Age Restrictions:</strong> 18 and above</li>
           </ul>
 
-          {/* Tags */}
+      
           <h5 className="fw-bold mt-4">Event Tags:</h5>
           <div>
             {event.tags?.map((tag, index) => (
@@ -85,7 +84,7 @@ const EventDetails = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+
         <div className="col-lg-4">
           <div className="p-4 border rounded-3 shadow-sm">
             <p className="mb-2">
@@ -98,7 +97,7 @@ const EventDetails = () => {
             </p>
             <p className="fw-bold fs-5 mb-4">₹ {event.price || 3000}</p>
 
-            {/* Speakers */}
+            
             <h6 className="fw-bold mb-3">Speakers:</h6>
             <div className="d-flex flex-wrap gap-3">
               {(event.speakers || [
