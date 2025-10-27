@@ -80,7 +80,7 @@ const Meet = () => {
             ></i>
           </div>
 
-          {/* Type filter */}
+        
           <select
             className="form-select shadow-sm"
             value={selectedType}
