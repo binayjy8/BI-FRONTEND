@@ -138,7 +138,7 @@ const Meet = () => {
 
                   <div className="card-body">
                     <p className="text-muted mb-1" style={{ fontSize: "0.9rem" }}>
-                      {formattedDate} • {formattedTime} IST
+                      {formattedDate} • {formattedTime} 
                     </p>
                     <h5 className="fw-bold mb-2">
                       <Link

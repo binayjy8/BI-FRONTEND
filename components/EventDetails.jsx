@@ -104,9 +104,9 @@ const EventDetails = () => {
           <div className="p-4 rounded-3 bg-white border mb-4">
             <p className="mb-2">🗓️ {formattedDate}</p>
             <p className="mb-2">
-              ⏰ {startTime} – {endTime} IST
+              ⏰ {startTime} – {endTime} 
             </p>
-            <p className="mb-2">📍 {event.location || "Venue to be announced"}</p>
+            <p className="mb-2"> {event.location || "Venue to be announced"}</p>
             <p className="fw-bold fs-5 mb-0">₹ {event.price || 3000}</p>
           </div>
 
