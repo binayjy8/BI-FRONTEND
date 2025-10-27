@@ -59,7 +59,7 @@ const Meet = () => {
         </h3>
 
         <div className="d-flex align-items-center gap-3 flex-wrap">
-          {/* Search bar */}
+          
           <div className="position-relative">
             <input
               type="text"
