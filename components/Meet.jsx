@@ -104,7 +104,7 @@ const Meet = () => {
         Meetup Events
       </h1>
 
-      {/* Events Grid */}
+    
       <div className="row g-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => {
