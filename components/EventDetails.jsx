@@ -52,7 +52,7 @@ const EventDetails = () => {
       </div>
 
       <div className="row g-5">
-        {/* Left Column */}
+  
         <div className="col-lg-8">
           <h2 className="fw-bold">{event.title}</h2>
           <p className="text-muted mb-4">
