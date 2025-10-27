@@ -153,17 +153,6 @@ const EventDetails = () => {
               </div>
             ))}
           </div>
-
-          <button
-            className="btn btn-danger w-100 mt-4"
-            style={{
-              borderRadius: "25px",
-              fontWeight: "600",
-              letterSpacing: "0.5px",
-            }}
-          >
-            RSVP
-          </button>
         </div>
       </div>
     </div>
