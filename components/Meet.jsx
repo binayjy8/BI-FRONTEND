@@ -26,7 +26,7 @@ const Meet = () => {
 
   const events = data?.event || [];
 
-  // ✅ Filter only by type and search (removed future event filter)
+  
   const filteredEvents = events.filter((event) => {
     const matchesType = selectedType === "Both" || event.eventType === selectedType;
     const search = searchTerm.toLowerCase();
