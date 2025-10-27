@@ -37,7 +37,7 @@ const Meet = () => {
 
   return (
     <div style={{ width: "100%", margin: 0, padding: "20px" }}>
-      {/* Header Section */}
+      
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
         style={{
