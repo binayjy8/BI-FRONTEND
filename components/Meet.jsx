@@ -26,27 +26,18 @@ const Meet = () => {
 
   const events = data?.event || [];
 
-  // ✅ Filter logic
-  const currentDate = new Date();
-
+  // ✅ Filter only by type and search (removed future event filter)
   const filteredEvents = events.filter((event) => {
-    const eventDate = new Date(event.dateTime);
-
-    // Only future events
-    const isFutureEvent = eventDate >= currentDate;
-
     const matchesType = selectedType === "Both" || event.eventType === selectedType;
     const search = searchTerm.toLowerCase();
-
     const matchesTitle = event.title?.toLowerCase().includes(search);
     const matchesTags = event.tags?.some((tag) => tag.toLowerCase().includes(search));
-
-    return isFutureEvent && matchesType && (matchesTitle || matchesTags);
+    return matchesType && (matchesTitle || matchesTags);
   });
 
   return (
     <div style={{ width: "100%", margin: 0, padding: "20px" }}>
-      {/* Top Filter Bar */}
+      {/* Header Section */}
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
         style={{
@@ -68,7 +59,7 @@ const Meet = () => {
         </h3>
 
         <div className="d-flex align-items-center gap-3 flex-wrap">
-          {/* Search Input */}
+          {/* Search bar */}
           <div className="position-relative">
             <input
               type="text"
@@ -89,7 +80,7 @@ const Meet = () => {
             ></i>
           </div>
 
-          {/* Filter Dropdown */}
+          {/* Type filter */}
           <select
             className="form-select shadow-sm"
             value={selectedType}
@@ -109,12 +100,11 @@ const Meet = () => {
         </div>
       </div>
 
-      {/* Title */}
       <h1 className="fw-bold mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        Upcoming Meetup Events
+        Meetup Events
       </h1>
 
-      {/* Event Cards */}
+      {/* Events Grid */}
       <div className="row g-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => {
@@ -159,7 +149,6 @@ const Meet = () => {
                       </Link>
                     </h5>
 
-                    {/* Tags */}
                     <div>
                       {event.tags?.slice(0, 3).map((tag, i) => (
                         <span
@@ -177,7 +166,7 @@ const Meet = () => {
             );
           })
         ) : (
-          <p className="text-center mt-4">No upcoming events found.</p>
+          <p className="text-center mt-4">No events found.</p>
         )}
       </div>
     </div>
@@ -185,6 +174,7 @@ const Meet = () => {
 };
 
 export default Meet;
+
 
 
 
