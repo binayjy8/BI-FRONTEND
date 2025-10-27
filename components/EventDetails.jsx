@@ -117,8 +117,6 @@ const EventDetails = () => {
                 </div>
               ))}
             </div>
-
-            <button className="btn btn-danger w-100 mt-4">RSVP</button>
           </div>
 
           <Link to="/" className="btn btn-link mt-3 w-100">
