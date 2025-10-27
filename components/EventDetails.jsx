@@ -99,7 +99,7 @@ const EventDetails = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        
         <div className="col-lg-4">
           <div className="p-4 rounded-3 bg-white border mb-4">
             <p className="mb-2">🗓️ {formattedDate}</p>
