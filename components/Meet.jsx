@@ -9,25 +9,37 @@ const Meet = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   if (loading) {
-    return <div className="container my-5"><p>Loading events...</p></div>;
+    return (
+      <div className="container my-5 text-center">
+        <p>Loading events...</p>
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="container my-5"><p>Error fetching data: {error.message}</p></div>;
+    return (
+      <div className="container my-5 text-center">
+        <p>Error fetching data: {error.message}</p>
+      </div>
+    );
   }
 
   const events = data?.event || [];
 
-  
+  // ✅ Filter by type and search term (title + tags)
   const filteredEvents = events.filter((event) => {
     const matchesType = selectedType === "Both" || event.eventType === selectedType;
-    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesType && matchesSearch;
+    const search = searchTerm.toLowerCase();
+
+    const matchesTitle = event.title?.toLowerCase().includes(search);
+    const matchesTags = event.tags?.some((tag) => tag.toLowerCase().includes(search));
+
+    return matchesType && (matchesTitle || matchesTags);
   });
 
   return (
     <div className="container my-4">
-      
+      {/* 🔹 Header with Search + Filter */}
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
         style={{
@@ -36,7 +48,6 @@ const Meet = () => {
           borderRadius: "10px",
         }}
       >
-        
         <h3
           className="fw-bold m-0"
           style={{
@@ -49,13 +60,13 @@ const Meet = () => {
           Meetup
         </h3>
 
-        
         <div className="d-flex align-items-center gap-3 flex-wrap">
+          {/* 🔍 Search box */}
           <div className="position-relative">
             <input
               type="text"
               className="form-control shadow-sm"
-              placeholder="Search by title..."
+              placeholder="Search by title or tag..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{
@@ -71,10 +82,9 @@ const Meet = () => {
             ></i>
           </div>
 
-         
+          {/* 🔽 Dropdown for event type */}
           <select
             className="form-select shadow-sm"
-            placeholder="Select event type"
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
             style={{
@@ -92,12 +102,12 @@ const Meet = () => {
         </div>
       </div>
 
-    
+      {/* 🔹 Section Title */}
       <h1 className="fw-bold mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
         Meetup Events
       </h1>
 
-      
+      {/* 🔹 Event Cards */}
       <div className="row g-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => {
@@ -133,7 +143,7 @@ const Meet = () => {
                     <p className="text-muted mb-1" style={{ fontSize: "0.9rem" }}>
                       {formattedDate} • {formattedTime} IST
                     </p>
-                    <h5 className="fw-bold mb-0">
+                    <h5 className="fw-bold mb-2">
                       <Link
                         to={`/events/env/${event._id}`}
                         style={{ textDecoration: "none", color: "black" }}
@@ -141,6 +151,19 @@ const Meet = () => {
                         {event.title}
                       </Link>
                     </h5>
+
+                    {/* 🔹 Tags */}
+                    <div>
+                      {event.tags?.slice(0, 3).map((tag, i) => (
+                        <span
+                          key={i}
+                          className="badge bg-danger-subtle text-danger border me-1"
+                          style={{ fontSize: "0.8rem" }}
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -155,4 +178,5 @@ const Meet = () => {
 };
 
 export default Meet;
+
            
