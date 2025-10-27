@@ -24,13 +24,14 @@ const EventDetails = () => {
     <div className="container my-5">
     
       <div className="d-flex align-items-center mb-4">
-        style={{
+        <h3 className="fw-bold m-0"
+         style={{
             color: "#f64060",
             fontFamily: "'Poppins', sans-serif",
             fontWeight: "700",
             letterSpacing: "0.5px",
           }}
-        <h3 className="fw-bold m-0">Meetup</h3>
+        >Meetup</h3>
       </div>
 
       {/* Event Title */}
