@@ -38,7 +38,8 @@ const Meet = () => {
   });
 
   return (
-    <div className="container my-4">
+    <div style={{ width: "100%", margin: 0, padding: "20px" }}>
+
      
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
