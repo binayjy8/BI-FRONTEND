@@ -26,7 +26,7 @@ const Meet = () => {
 
   const events = data?.event || [];
 
-  // ✅ Filter by type and search term (title + tags)
+  
   const filteredEvents = events.filter((event) => {
     const matchesType = selectedType === "Both" || event.eventType === selectedType;
     const search = searchTerm.toLowerCase();
@@ -39,7 +39,7 @@ const Meet = () => {
 
   return (
     <div className="container my-4">
-      {/* 🔹 Header with Search + Filter */}
+     
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
         style={{
@@ -61,7 +61,7 @@ const Meet = () => {
         </h3>
 
         <div className="d-flex align-items-center gap-3 flex-wrap">
-          {/* 🔍 Search box */}
+         
           <div className="position-relative">
             <input
               type="text"
@@ -82,7 +82,7 @@ const Meet = () => {
             ></i>
           </div>
 
-          {/* 🔽 Dropdown for event type */}
+        
           <select
             className="form-select shadow-sm"
             value={selectedType}
@@ -102,12 +102,12 @@ const Meet = () => {
         </div>
       </div>
 
-      {/* 🔹 Section Title */}
+      
       <h1 className="fw-bold mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
         Meetup Events
       </h1>
 
-      {/* 🔹 Event Cards */}
+    
       <div className="row g-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => {
@@ -152,7 +152,7 @@ const Meet = () => {
                       </Link>
                     </h5>
 
-                    {/* 🔹 Tags */}
+                    
                     <div>
                       {event.tags?.slice(0, 3).map((tag, i) => (
                         <span
