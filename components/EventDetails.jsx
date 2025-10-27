@@ -45,7 +45,7 @@ const EventDetails = () => {
       }}
     >
       <div className="container text-center">
-        {/* Back Button */}
+        
         <div className="mb-4">
           <Link to="/" className="btn btn-outline-danger">
             ← Back to Events
@@ -70,7 +70,7 @@ const EventDetails = () => {
           Hosted By: <strong>{event.hostedBy || "Event Organizer"}</strong>
         </p>
 
-        {/* Image */}
+        
         <img
           src={event.imageUrl}
           alt={event.title}
@@ -78,14 +78,14 @@ const EventDetails = () => {
           style={{ maxHeight: "400px", objectFit: "cover", width: "100%", maxWidth: "700px" }}
         />
 
-        {/* Event Details */}
+        
         <h5 className="fw-bold">Details:</h5>
         <p className="text-secondary" style={{ lineHeight: "1.7" }}>
           {event.description ||
-            "Stay ahead of the game by attending this event and gaining insights from experts."}
+            "Join us for an inspiring and knowledge-packed event designed to bring together curious minds, professionals, and innovators from across the industry. This gathering is not just about listening — it’s about engaging, learning, and building meaningful connections. Throughout the event, attendees will gain deep insights into the latest trends, emerging tools, and best practices driving real change in today’s competitive world. Experienced speakers will share their personal journeys, case studies, and hands-on strategies to help you understand complex concepts in a simple, practical way. In addition to the main sessions, there will be opportunities for Q&A, open networking, and interactive workshops aimed at fostering collaboration and creativity. Whether you’re a student eager to learn, a working professional looking to upgrade your skills, or simply passionate about innovation, this event promises to offer valuable experiences and actionable takeaways that can make a lasting impact on your personal and professional growth."}
         </p>
 
-        {/* Event Info */}
+        
         <div className="my-4">
           <p className="mb-2">
             📅 {formattedDate} at {formattedTime}
@@ -96,7 +96,7 @@ const EventDetails = () => {
           <p className="fw-bold fs-5 mb-4">₹ {event.price || 3000}</p>
         </div>
 
-        {/* Speakers Section */}
+        
         <h6 className="fw-bold mb-3">Speakers</h6>
         <div className="d-flex justify-content-center flex-wrap gap-3">
           {(event.speakers || [
