@@ -33,7 +33,7 @@ const EventDetails = () => {
   const eventDate = new Date(event.dateTime);
   const formattedDate = eventDate.toDateString();
 
-  // Example: assume event lasts 3 hours
+  
   const startTime = eventDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   const endTime = new Date(eventDate.getTime() + 3 * 60 * 60 * 1000).toLocaleTimeString([], {
     hour: "2-digit",
