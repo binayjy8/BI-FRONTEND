@@ -110,7 +110,7 @@ const EventDetails = () => {
             <p className="fw-bold fs-5 mb-0">₹ {event.price || 3000}</p>
           </div>
 
-          {/* Speakers */}
+          
           <h6 className="fw-bold mb-3">Speakers:</h6>
           <div className="d-flex flex-wrap gap-3">
             {(event.speakers || [
