@@ -81,7 +81,7 @@ const EventDetails = () => {
           <div className="mt-4">
             <h5 className="fw-bold mb-2">Event Tags:</h5>
             <div className="d-flex flex-wrap gap-2">
-              {(event.tags || ["networking", "career", "growth"]).map((tag, i) => (
+              {(event.tags || ["marketing", "digital"]).map((tag, i) => (
                 <span
                   key={i}
                   className="badge px-3 py-2"
