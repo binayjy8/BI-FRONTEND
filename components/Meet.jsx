@@ -36,7 +36,11 @@ const Meet = () => {
   });
 
   return (
-    <div style={{ width: "100%", margin: 0, padding: "20px" }}>
+    <div
+  className="container-fluid my-5 px-5"
+  style={{ fontFamily: "'Poppins', sans-serif", backgroundColor: "#fff" }}
+  >
+
       
       <div
         className="d-flex justify-content-between align-items-center flex-wrap mb-4 px-2 py-3"
