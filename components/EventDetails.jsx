@@ -41,7 +41,7 @@ const EventDetails = () => {
   });
 
   return (
-    <div className="container my-5" style={{ fontFamily: "'Poppins', sans-serif" }}>
+      <div className="container-fluid my-5 px-5" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h3 className="fw-bold" style={{ color: "#f64060" }}>
           Meetup
