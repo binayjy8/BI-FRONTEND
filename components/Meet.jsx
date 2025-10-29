@@ -90,7 +90,7 @@ const Meet = () => {
             style={{
               borderRadius: "25px",
               fontSize: "0.9rem",
-              width: "180px",
+              width: "280px",
               cursor: "pointer",
               border: "1px solid #ddd",
             }}
