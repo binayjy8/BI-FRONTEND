@@ -72,7 +72,7 @@ const Meet = () => {
               style={{
                 borderRadius: "25px",
                 paddingLeft: "40px",
-                width: "250px",
+                width: "100%",
                 border: "1px solid #ddd",
               }}
             />
