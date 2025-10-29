@@ -62,7 +62,7 @@ const Meet = () => {
 
         <div className="d-flex align-items-center gap-3 flex-wrap">
           
-          <div className="position-relative" style={{ width: "100%" }}>
+          <div className="position-relative">
             <input
               type="text"
               className="form-control shadow-sm"
